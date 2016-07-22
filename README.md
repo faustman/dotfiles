@@ -15,6 +15,10 @@ Let's develop.
     - https://mattstauffer.co/blog/setting-up-a-new-os-x-development-machine-part-3-dotfiles-rc-files-and-ssh-config
 - .gitconfig
 
+### Fish Shell
+Install beta 2.3.0
+https://launchpad.net/~fish-shell/+archive/ubuntu/beta-2 
+
 ### Tools
 - https://github.com/nvbn/thefuck
 
@@ -22,6 +26,15 @@ Let's develop.
 
 - https://github.com/webpro/awesome-dotfiles
 - https://github.com/cowboy/dotfiles
+
+### Fonts
+
+- https://github.com/ryanoasis/nerd-fonts
+
+
+### Vim
+
+- https://github.com/ryanoasis/vim-devicons
 
 
 ### Dev Orchestration needs
