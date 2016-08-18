@@ -15,8 +15,14 @@ Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-fugitive'
 Plug 'jiangmiao/auto-pairs'
 
+" Snippets
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+
 " JavaScript & NodeJS
 Plug 'othree/yajs.vim'
+Plug 'moll/vim-node'
+Plug 'pangloss/vim-javascript'
 
 " UI
 Plug 'ryanoasis/vim-devicons'
