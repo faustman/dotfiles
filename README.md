@@ -26,6 +26,8 @@ https://launchpad.net/~fish-shell/+archive/ubuntu/beta-2
 
 - https://github.com/webpro/awesome-dotfiles
 - https://github.com/cowboy/dotfiles
+- https://github.com/tony/vim-config-framework
+- https://github.com/tony/tmux-config
 
 ### Fonts
 
