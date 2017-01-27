@@ -24,6 +24,9 @@ Plug 'othree/yajs.vim'
 Plug 'moll/vim-node'
 Plug 'pangloss/vim-javascript'
 
+" Go
+Plug 'fatih/vim-go'
+
 " UI
 Plug 'ryanoasis/vim-devicons'
 Plug 'itchyny/lightline.vim'
@@ -32,6 +35,8 @@ Plug 'tomasr/molokai'
 call plug#end()
 
 " Let's tune VIM
+set t_Co=256
+
 colorscheme molokai
 
 " show existing tab with 4 spaces width
@@ -63,7 +68,18 @@ if has("autocmd")
     au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
 
+" Cursor style in diferent modes
+"
+
+" let &t_EI = "\<Esc>[1 q"
+" let &t_SR = "\<Esc>[3 q"
+" let &t_SI = "\<Esc>[5 q"
+
+
 " Lightline custom
+"
+" Font: https://github.com/ryanoasis/nerd-fonts
+" Separators: https://github.com/ryanoasis/powerline-extra-symbols#glyphs
 "
 let g:lightline = {
       \ 'colorscheme': 'jellybeans',
@@ -81,8 +97,8 @@ let g:lightline = {
       \   'fileencoding': 'LightLineFileencoding',
       \   'mode': 'LightLineMode',
       \ },
-      \ 'separator': { 'left': "\ue0c4", 'right': "\ue0c5" },
-      \ 'subseparator': { 'left': "\ue0c6", 'right': "\ue0c7" },
+      \ 'separator': { 'left': "\ue0b0", 'right': "\ue0b2" },
+      \ 'subseparator': { 'left': "\ue0b1", 'right': "\ue0b3" }
       \ }
 
 function! LightLineModified()
@@ -129,4 +145,3 @@ endfunction
 function! LightLineMode()
   return winwidth(0) > 60 ? lightline#mode() : ''
 endfunction
-

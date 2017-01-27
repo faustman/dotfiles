@@ -8,6 +8,7 @@ fisherman/getopts
 oh-my-fish/plugin-grc
 fisherman/last_job_id
 fisherman/menu
+fisherman/rbenv
 simnalamburt/shellder
 oh-my-fish/plugin-tab
 oh-my-fish/plugin-thefuck
