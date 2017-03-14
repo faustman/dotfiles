@@ -14,6 +14,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-fugitive'
 Plug 'jiangmiao/auto-pairs'
+Plug '/usr/bin/fzf' | Plug 'junegunn/fzf.vim'
 
 " Snippets
 Plug 'SirVer/ultisnips'
@@ -23,6 +24,12 @@ Plug 'honza/vim-snippets'
 Plug 'othree/yajs.vim'
 Plug 'moll/vim-node'
 Plug 'pangloss/vim-javascript'
+Plug 'isRuslan/vim-es6'
+
+" Frontend related
+"
+Plug 'posva/vim-vue'
+Plug 'othree/html5.vim'
 
 " Go
 Plug 'fatih/vim-go'
@@ -40,9 +47,9 @@ set t_Co=256
 colorscheme molokai
 
 " show existing tab with 4 spaces width
-set tabstop=4
+set tabstop=2
 " " when indenting with '>', use 4 spaces width
-set shiftwidth=4
+set shiftwidth=2
 " " On pressing tab, insert 4 spaces
 set expandtab
 
@@ -55,6 +62,11 @@ set hlsearch
 set number
 set relativenumber
 set cursorline
+
+" No noise
+set noswapfile
+set nobackup
+set nowritebackup
 
 set colorcolumn=80
 
