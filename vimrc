@@ -30,6 +30,7 @@ Plug 'isRuslan/vim-es6'
 "
 Plug 'posva/vim-vue'
 Plug 'othree/html5.vim'
+Plug 'mattn/emmet-vim'
 
 " Go
 Plug 'fatih/vim-go'
@@ -157,3 +158,7 @@ endfunction
 function! LightLineMode()
   return winwidth(0) > 60 ? lightline#mode() : ''
 endfunction
+
+" Emmet config
+"
+autocmd FileType html,css,vue EmmetInstall
