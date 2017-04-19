@@ -1,8 +1,20 @@
+
 # If you come from bash you might have to change your $PATH.
 export GOPATH=$HOME
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-source /usr/share/zsh/share/antigen.zsh
+RED='\033[0;31m'
+NC='\033[0m' # No Color
+
+ANTIGEN=/usr/share/zsh/share/antigen.zsh
+
+if [[ ! -a $ANTIGEN ]]
+then
+  echo "${RED}WARNING! Antigen package package not installed. Abort.${NC}"
+  return 1
+fi
+
+source $ANTIGEN
 
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
