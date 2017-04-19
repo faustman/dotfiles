@@ -1,7 +1,6 @@
 # Dotfiles
 Let's develop.
 
-
 ## Dotfiles init process
 
 - ssh
@@ -19,6 +18,10 @@ Let's develop.
 Install beta 2.3.0
 https://launchpad.net/~fish-shell/+archive/ubuntu/beta-2 
 
+### Zsh
+
+Prefer this shell now. See `zshrc` for details.
+
 ### Tools
 - https://github.com/nvbn/thefuck
 
@@ -33,10 +36,16 @@ https://launchpad.net/~fish-shell/+archive/ubuntu/beta-2
 
 - https://github.com/ryanoasis/nerd-fonts
 
-
 ### Vim
 
 - https://github.com/ryanoasis/vim-devicons
+
+### Packages
+
+- frankenwm-git
+- nerd-fonts-source-code-pro
+- yabar-git
+- antigen-git
 
 
 ### Dev Orchestration needs
