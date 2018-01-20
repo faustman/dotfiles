@@ -13,6 +13,7 @@ call plug#begin('~/.vim/plugged')
 " Common
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-git'
 Plug 'jiangmiao/auto-pairs'
 Plug '/usr/bin/fzf' | Plug 'junegunn/fzf.vim'
 
