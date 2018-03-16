@@ -21,9 +21,14 @@ antigen use oh-my-zsh
 
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
 antigen bundle git
+antigen bundle git-extras
 antigen bundle heroku
 antigen bundle pip
 antigen bundle command-not-found
+
+# Some NodeJS specific bundle
+antigen bundle lukechilds/zsh-nvm
+antigen bundle lukechilds/zsh-nvm
 
 # Syntax highlighting bundle.
 antigen bundle zsh-users/zsh-syntax-highlighting

@@ -34,7 +34,9 @@
 	untracked = cyan
 
 [user]
-	email = andrii.tytar@gmail.com
+	email = andrii.tytar@sigma.software
 	name = Andrii Tytar
 [push]
 	default = simple
+[core]
+	editor = vim
