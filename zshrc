@@ -6,7 +6,8 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 RED='\033[0;31m'
 NC='\033[0m' # No Color
 
-ANTIGEN=/usr/share/zsh/share/antigen.zsh
+# ANTIGEN=/usr/share/zsh/share/antigen.zsh # Linux
+ANTIGEN=/usr/local/share/antigen/antigen.zsh
 
 if [[ ! -a $ANTIGEN ]]
 then
@@ -15,6 +16,9 @@ then
 fi
 
 source $ANTIGEN
+
+# TODO Chech rbenv bin
+eval "$(rbenv init -)"
 
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
