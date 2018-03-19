@@ -15,7 +15,10 @@ Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-git'
 Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-surround'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug '/usr/bin/fzf' | Plug 'junegunn/fzf.vim'
+Plug 'w0rp/ale'
 
 " Snippets
 Plug 'SirVer/ultisnips'
@@ -25,6 +28,8 @@ Plug 'honza/vim-snippets'
 Plug 'othree/yajs.vim'
 Plug 'moll/vim-node'
 Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'leshill/vim-json'
 Plug 'isRuslan/vim-es6'
 
 " Frontend related
@@ -99,7 +104,10 @@ let g:lightline = {
       \ 'colorscheme': 'jellybeans',
       \ 'mode_map': { 'c': 'NORMAL' },
       \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ] ]
+      \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ] ],
+      \   'right': [ [ 'lineinfo' ],
+      \              [ 'percent' ],
+      \              [ 'fileformat', 'fileencoding', 'filetype', 'linterstatus' ] ]
       \ },
       \ 'component_function': {
       \   'modified': 'LightLineModified',
@@ -110,10 +118,14 @@ let g:lightline = {
       \   'filetype': 'LightLineFiletype',
       \   'fileencoding': 'LightLineFileencoding',
       \   'mode': 'LightLineMode',
+      \   'linterstatus': 'LinterStatus'
       \ },
       \ 'separator': { 'left': "\ue0b0", 'right': "\ue0b2" },
       \ 'subseparator': { 'left': "\ue0b1", 'right': "\ue0b3" }
       \ }
+
+" Set this. Airline will handle the rest.
+let g:lightline#extensions#ale#enabled = 1
 
 function! LightLineModified()
   return &ft =~ 'help\|vimfiler\|gundo' ? '' : &modified ? '+' : &modifiable ? '' : '-'
@@ -160,6 +172,25 @@ function! LightLineMode()
   return winwidth(0) > 60 ? lightline#mode() : ''
 endfunction
 
+function! LinterStatus() abort
+  let l:counts = ale#statusline#Count(bufnr(''))
+
+  let l:all_errors = l:counts.error + l:counts.style_error
+  let l:all_non_errors = l:counts.total - l:all_errors
+
+  return l:counts.total == 0 ? 'OK' : printf(
+    \   '%dW %dE',
+    \   all_non_errors,
+    \   all_errors
+    \)
+endfunction
+
+
 " Emmet config
 "
 autocmd FileType html,css,vue EmmetInstall
+
+
+" JSX in JS
+let g:jsx_ext_required = 0
+

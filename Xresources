@@ -136,8 +136,8 @@ Xft.antialias:  1
 
 ! -- Fonts -- !
 URxvt.font:xft:SauceCodePro\ Nerd\ Font:pixelsize=13:style=Medium, xft:Symbola:pixelsize=9:style=Regular
-URxvt.boldFont:xft:SauceCodePro\ Nerd\ Font:pixelsize=13:style=Bold, xft:Symbola:pixelsize=9:style=Regular
-URxvt.letterSpace: 0
+URxvt.boldFont:xft:SauceCodePro\ Nerd\ Font:style=Bold:pixelsize=13, xft:Symbola:pixelsize=9:style=Regular
+URxvt.letterSpace: -1
 
 *faceSize:              10
 *bellIsUrgent:          true
@@ -161,10 +161,12 @@ URxvt.secondaryWheel:   1
 URxvt*termName:         rxvt
 
 !! clickable urls
-URxvt.perl-ext-common:      default,matcher,selection-to-clipboard,clipboard
-URxvt.url-launcher:         /usr/bin/xdg-open
-URxvt.matcher.button:       1
+URxvt.perl-ext-common:      default,selection-to-clipboard,clipboard,url-select,keyboard-select
+URxvt.url-select.launcher:  chromium
 URxvt.url-select.underline: true
+URxvt.keysym.M-u:           perl:url-select:select_next
+URxvt.keysym.M-Escape:      perl:keyboard-select:activate
+URxvt.keysym.M-s:           perl:keyboard-select:search
 
 !! disable default bindings for Control-Shift
 URxvt.iso14755: false
