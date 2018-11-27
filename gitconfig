@@ -34,9 +34,16 @@
 	untracked = cyan
 
 [user]
-	email = andrii.tytar@sigma.software
+	email = andrii@belive.tv
 	name = Andrii Tytar
 [push]
 	default = simple
 [core]
 	editor = vim
+	excludesfile = /Users/faustman/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true

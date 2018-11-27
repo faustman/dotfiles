@@ -19,6 +19,7 @@ Plug 'tpope/vim-surround'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug '/usr/bin/fzf' | Plug 'junegunn/fzf.vim'
 Plug 'w0rp/ale'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  }
 
 " Snippets
 Plug 'SirVer/ultisnips'
@@ -31,6 +32,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'leshill/vim-json'
 Plug 'isRuslan/vim-es6'
+Plug 'digitaltoad/vim-pug'
 
 " Frontend related
 "
@@ -45,6 +47,11 @@ Plug 'fatih/vim-go'
 Plug 'ryanoasis/vim-devicons'
 Plug 'itchyny/lightline.vim'
 Plug 'tomasr/molokai'
+
+" Ruby and Rails
+Plug 'tpope/vim-rails'
+Plug 'slim-template/vim-slim'
+Plug 'kchmck/vim-coffee-script'
 
 call plug#end()
 
